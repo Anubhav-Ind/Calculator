@@ -1,0 +1,37 @@
+from tkinter import *
+
+txtcolor = "black"
+rec1_color = "lightyellow"
+
+root = Tk()
+root.geometry("548x548")
+root.resizable(height=False,width=False)
+root.title("Calculator Tutorial")
+root.wm_iconbitmap("Icons\\Tutorial.ico")
+can_widget = Canvas(root,width=524,height=524)
+can_widget.create_text(274,20, text="Calculator Prerequisites" ,
+                       fill=f"{txtcolor}" , font="verdana 25 bold")
+rec1 = can_widget.create_rectangle(20,50,515,524, fill=f"{rec1_color}")
+
+can_widget.create_text(272,80, text="Key Meanings and usage Suggetions",
+                       fill=f"{txtcolor}" , font="helvetica 18 bold underline")
+can_widget.create_text(200,130, text="1 ) y ** (x)   means y to the POWER x .",
+                       fill=f"{txtcolor}" , font="lucida 15 italic")
+can_widget.create_text(268,170, text="2 ) y % (x)   means the REMAINDER on dividing y to x",
+                       fill=f"{txtcolor}" , font="lucida 15 italic")
+can_widget.create_text(192,210, text="3 ) CE key CLEARS all the OUTPUT .",
+                       fill=f"{txtcolor}" , font="lucida 15 italic")
+can_widget.create_text(214,250, text="4 ) *   key means the MULTIPLY operator .",
+                       fill=f"{txtcolor}" , font="lucida 15 italic")
+can_widget.create_text(223,290, text="5 ) (--   key POPS out the Last KEY entered .",
+                       fill=f"{txtcolor}" , font="lucida 15 italic")
+can_widget.create_text(264,330, text="6 ) y % (x)   means the QUOTIENT on dividing y to x .",
+                       fill=f"{txtcolor}" , font="lucida 15 italic")
+can_widget.create_text(265,390, text="7 ) It is SUGGESTED to either use Keyboard or Mouse\n    But NOT BOTH , If you use BOTH then you should\n    take care of TEXT CURSOR INDICATOR ' |' .",
+                       fill=f"{txtcolor}" , font="lucida 15 italic")
+can_widget.create_text(176,450, text="8 ) Math.pi key is the value of pie .",
+                       fill=f"{txtcolor}" , font="lucida 15 italic")
+can_widget.create_text(210,500, text="9 ) In math.key_name() type keys \n    the argument must be passed inside () .",
+                       fill=f"{txtcolor}" , font="lucida 15 italic")
+can_widget.pack()
+root.mainloop()
